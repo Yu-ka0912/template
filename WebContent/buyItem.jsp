@@ -93,7 +93,7 @@
 								現金払い
 							</label>
 							<label>
-								input type="radio" name="pay" value="2" />
+								<input type="radio" name="pay" value="2" />
 								クレジットカード
 							</label>
 						</td>
