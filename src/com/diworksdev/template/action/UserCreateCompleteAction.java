@@ -16,6 +16,9 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 	private Map<String, Object> session;
 
 	public String execute() throws SQLException {
+		session.put("loginUserId", loginUserId);
+		session.put("loginPassword", loginPassword);
+		session.put("userName", userName);
 		UserCreateCompleteDAO userCreateCompleteDAO = new UserCreateCompleteDAO();
 		userCreateCompleteDAO.createUser(session.get("loginUserId").toString(), session.get("loginPassword").toString(),
 				session.get("userName").toString());
