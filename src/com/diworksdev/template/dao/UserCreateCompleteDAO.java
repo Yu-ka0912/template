@@ -28,6 +28,7 @@ public class UserCreateCompleteDAO {
 			preparedStatement.execute();
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new SQLException("ユーザー作成中にエラーが発生しました: " + e.getMessage(), e);
 		} finally {
 			connection.close();
 		}
